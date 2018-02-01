@@ -142,14 +142,16 @@ h3 {
   padding: 0 5px;
   border-radius: 5px;
   color: white;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  box-shadow: 3px 3px 3px gray; }
 
 .education > span {
   background-color: #3e5486;
   padding: 0 5px;
   border-radius: 5px;
   color: white;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  box-shadow: 3px 3px 3px gray; }
 
 .education_table {
   margin-top: 5px;
@@ -182,7 +184,8 @@ h3 {
   padding: 0 5px;
   border-radius: 5px;
   color: white;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  box-shadow: 3px 3px 3px gray; }
 
 .publications_table {
   margin-top: 5px;
@@ -206,7 +209,8 @@ h3 {
   padding: 0 5px;
   border-radius: 5px;
   color: white;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  box-shadow: 3px 3px 3px gray; }
 
 .awards_table {
   margin-top: 5px;
@@ -230,7 +234,8 @@ h3 {
   padding: 0 5px;
   border-radius: 5px;
   color: white;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  box-shadow: 3px 3px 3px gray; }
 
 .experience_table {
   margin-top: 5px;
@@ -264,7 +269,8 @@ h3 {
   padding: 0 5px;
   border-radius: 5px;
   color: white;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  box-shadow: 3px 3px 3px gray; }
 
 .other h3 {
   margin: 10px 0;
