@@ -19,13 +19,13 @@
 
     h1 {
       font-weight: bold;
-      color: #34547d;
+      color: $text-color3;
       @include rem(font-size, 36px);
     }
 
     h2 {
       font-weight: bold;
-      color: #3b2e26;
+      color: $text-color4;
       @include rem(font-size, 28px);
     }
   }
@@ -36,19 +36,43 @@
 
       li {
         list-style: none;
-        margin-left: -40px;
-        height: 40px;
-        margin-bottom: 5px;
+        @include rem(margin-left, -40px);
+        @include rem(font-size, 16px);
+
+        @include tablet {
+          @include rem(margin-bottom, 10px);
+        }
+
+        @include desktop {
+          @include rem(margin-bottom, 5px);
+        }
 
         i{
-          color: white;
-          font-size: 26px;
-          text-align: center;
-          line-height: 40px;
-          width: 40px;
-          height: 40px;
+          color: $text-color1;
           background-color: $bg-color-icons;
           border-radius: 50%;
+          text-align: center;
+          @include rem(font-size, 26px);
+
+          @include tablet {
+            @include rem(line-height, 60px);
+            //line-height: 40px;
+            @include rem(width, 60px);
+            //width: 40px;
+            @include rem(height, 60px);
+            //height: 40px;
+          }
+
+          @include desktop {
+            @include rem(font-size, 26px);
+            @include rem(line-height, 40px);
+            //line-height: 40px;
+            @include rem(width, 40px);
+            //width: 40px;
+            @include rem(height, 40px);
+            //height: 40px;
+          }
+
 
           &:hover {
             background-color: darkred;
@@ -73,13 +97,13 @@
   margin-bottom: 10px;
 
   &_title {
-    color: #3b2e26;
-    text-shadow: 3px 2px 3px gray;
 
     h2 {
       font-weight: bold;
-      color: #3b2e26;
+      text-shadow: 3px 2px 3px gray;
+      color: $text-color4;
       @include rem(font-size, 28px);
+
     }
   }
 
@@ -98,15 +122,14 @@
 .skills{
   margin-bottom: 10px;
 
-  h2 {
-    font-weight: bold;
-    color: #3b2e26;
-    @include rem(font-size, 28px);
-  }
-
   &_title {
-    color: #3b2e26;
-    text-shadow: 3px 2px 3px gray;
+
+    h2 {
+      font-weight: bold;
+      color: $text-color4;
+      text-shadow: 3px 2px 3px gray;
+      @include rem(font-size, 28px);
+    }
   }
 
   &_content {
@@ -123,9 +146,18 @@
     }
 
     progress {
-      height: 20px;
       width: 100%;
       background-color: #b8b8b8;
+
+      @include tablet {
+        @include rem(height, 40px);
+      }
+
+      @include desktop {
+        @include rem(height, 20px);
+      }
+
+
 
       &::-webkit-progress-value {
         background-color: #335582;

@@ -114,19 +114,56 @@ html, body {
 .info_contact ul li {
   list-style: none;
   margin-left: -40px;
-  height: 40px;
-  margin-bottom: 5px;
+  margin-left: -2.5rem;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+@media (max-device-width: 767px) {
+  .info_contact ul li {
+    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+  }
+}
+
+@media (min-device-width: 768px) {
+  .info_contact ul li {
+    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
+  }
 }
 
 .info_contact ul li i {
   color: white;
-  font-size: 26px;
-  text-align: center;
-  line-height: 40px;
-  width: 40px;
-  height: 40px;
   background-color: #355681;
   border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+
+@media (max-device-width: 767px) {
+  .info_contact ul li i {
+    line-height: 60px;
+    line-height: 3.75rem;
+    width: 60px;
+    width: 3.75rem;
+    height: 60px;
+    height: 3.75rem;
+  }
+}
+
+@media (min-device-width: 768px) {
+  .info_contact ul li i {
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 40px;
+    line-height: 2.5rem;
+    width: 40px;
+    width: 2.5rem;
+    height: 40px;
+    height: 2.5rem;
+  }
 }
 
 .info_contact ul li i:hover {
@@ -146,13 +183,9 @@ html, body {
   margin-bottom: 10px;
 }
 
-.about_title {
-  color: #3b2e26;
-  text-shadow: 3px 2px 3px gray;
-}
-
 .about_title h2 {
   font-weight: bold;
+  text-shadow: 3px 2px 3px gray;
   color: #3b2e26;
   font-size: 28px;
   font-size: 1.75rem;
@@ -171,16 +204,12 @@ html, body {
   margin-bottom: 10px;
 }
 
-.skills h2 {
+.skills_title h2 {
   font-weight: bold;
   color: #3b2e26;
+  text-shadow: 3px 2px 3px gray;
   font-size: 28px;
   font-size: 1.75rem;
-}
-
-.skills_title {
-  color: #3b2e26;
-  text-shadow: 3px 2px 3px gray;
 }
 
 .skills_content {
@@ -198,9 +227,22 @@ html, body {
 }
 
 .skills_content progress {
-  height: 20px;
   width: 100%;
   background-color: #b8b8b8;
+}
+
+@media (max-device-width: 767px) {
+  .skills_content progress {
+    height: 40px;
+    height: 2.5rem;
+  }
+}
+
+@media (min-device-width: 768px) {
+  .skills_content progress {
+    height: 20px;
+    height: 1.25rem;
+  }
 }
 
 .skills_content progress::-webkit-progress-value {
