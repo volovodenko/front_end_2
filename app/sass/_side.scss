@@ -1,0 +1,135 @@
+
+
+.info {
+  margin-bottom: 10px;
+
+  &_foto {
+    text-align: center;
+
+    img {
+      border-radius: 50%;
+      box-shadow:
+              5px 5px 5px gray,
+              -5px 5px 5px gray;
+    }
+  }
+
+  &_name {
+    text-shadow: 3px 2px 3px gray;
+
+    h1 {
+      font-weight: bold;
+      color: #34547d;
+      @include rem(font-size, 36px);
+    }
+
+    h2 {
+      font-weight: bold;
+      color: #3b2e26;
+      @include rem(font-size, 28px);
+    }
+  }
+
+  &_contact {
+
+    ul {
+
+      li {
+        list-style: none;
+        margin-left: -40px;
+        height: 40px;
+        margin-bottom: 5px;
+
+        i{
+          color: white;
+          font-size: 26px;
+          text-align: center;
+          line-height: 40px;
+          width: 40px;
+          height: 40px;
+          background-color: $bg-color-icons;
+          border-radius: 50%;
+
+          &:hover {
+            background-color: darkred;
+            box-shadow: 3px 3px 3px gray;
+          }
+        }
+
+        span, a {
+          line-height: 40px;
+          margin-left: 10px;
+          vertical-align: top;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+.about {
+  margin-bottom: 10px;
+
+  &_title {
+    color: #3b2e26;
+    text-shadow: 3px 2px 3px gray;
+
+    h2 {
+      font-weight: bold;
+      color: #3b2e26;
+      @include rem(font-size, 28px);
+    }
+  }
+
+  &_main {
+    padding: 10px 0;
+
+    p {
+      margin: 0;
+      text-align: justify;
+    }
+  }
+}
+
+
+
+.skills{
+  margin-bottom: 10px;
+
+  h2 {
+    font-weight: bold;
+    color: #3b2e26;
+    @include rem(font-size, 28px);
+  }
+
+  &_title {
+    color: #3b2e26;
+    text-shadow: 3px 2px 3px gray;
+  }
+
+  &_content {
+    padding: 10px 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding-bottom: 5px;
+      }
+    }
+
+    progress {
+      height: 20px;
+      width: 100%;
+      background-color: #b8b8b8;
+
+      &::-webkit-progress-value {
+        background-color: #335582;
+      }
+    }
+  }
+}

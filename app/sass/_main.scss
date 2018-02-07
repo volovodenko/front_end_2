@@ -1,0 +1,59 @@
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  width: $wrapper-width;
+  margin: 0 auto;
+  background-color: $bg-color-wrapper;
+  min-height: 1400px;
+  min-width: 350px;
+  position: relative;
+}
+/*
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
+
+.side {
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: $bg-color-side;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: $aside-width;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+
+}
+
+.content {
+
+  box-sizing: border-box;
+  padding: 20px;
+
+  @include tablet {
+    float: left;
+    width: 100%;
+  }
+
+  @include desktop {
+    margin-left: $aside-width;
+  }
+
+
+
+}

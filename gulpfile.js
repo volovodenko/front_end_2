@@ -1,11 +1,14 @@
 var gulp = require("gulp"), //підключаєм gulp
 	sass = require("gulp-sass"), //підключаєм пакет gulp-sass
-    browserSync = require("browser-sync"); //підключаєм пакет BrowserSync
+    browserSync = require("browser-sync"), //підключаєм пакет BrowserSync
+	notify = require("gulp-notify"),  //підключаєм пакет для виводу помилок у вспливаюче вікно
+	autoprefixer = require("gulp-autoprefixer"); //Автоматичне створення вендорних автопрефіксів
 
 //Препроцесінг sass
 gulp.task("sass", function() { //таск з назвою "sass"
 	return gulp.src("app/sass/**/*.scss") //берем всі файли файли scss у папці app/sass/  (** - люба вложена папка) 
-	.pipe(sass()) //pipe - визов пакета sass (перетворює файли *.sass або *.scss в файли *.css)
+	.pipe(sass({outputStyle: "expanded"}).on('error', notify.onError())) //pipe - визов пакета sass (перетворює файли *.sass або *.scss в файли *.css)
+	.pipe(autoprefixer(["last 3 versions"], { cascade: true }))
 	.pipe(gulp.dest("app/css")) //виводим результат перетворення в папку www/css (тут файл не пишеться, тільки папка)
     .pipe(browserSync.reload({stream: true})) //інжектування стилів css наживо в нашу веб-сторінку
 });

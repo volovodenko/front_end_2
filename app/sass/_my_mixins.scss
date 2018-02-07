@@ -1,0 +1,54 @@
+@function parseInt($n) { //10px => 10; 15rem => 15 і т.д.
+  @return $n / ($n * 0 + 1);  //це геніально
+}
+
+@mixin rem($property, $values) {
+  $px: ();
+  $rem: ();
+
+  @each $value in $values {
+
+    @if $value == 0 or $value == auto {
+      $px: append($px, $value);
+      $rem: append($px, $value);
+
+    } @else {
+      $val: parseInt($value);
+
+      @if unitless($value) {
+        @error "Знечение не может быть безразмерным";
+
+      } @else if unit($value) == "px" {
+        $px: append($px, $value);
+        $rem: append($rem, ($val / 16 + rem));
+
+      } @else if unit($value) == "rem" {
+        $px: append($px, ($val * 16 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+
+$tablet-width: 768px;
+
+
+@mixin tablet {
+  @media (max-device-width : $tablet-width - 1) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-device-width : $tablet-width) {
+    @content;
+  }
+}
