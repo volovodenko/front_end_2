@@ -2,7 +2,9 @@ var gulp = require("gulp"), //підключаєм gulp
 	sass = require("gulp-sass"), //підключаєм пакет gulp-sass
     browserSync = require("browser-sync"), //підключаєм пакет BrowserSync
 	notify = require("gulp-notify"),  //підключаєм пакет для виводу помилок у вспливаюче вікно
-	autoprefixer = require("gulp-autoprefixer"); //Автоматичне створення вендорних автопрефіксів
+	autoprefixer = require("gulp-autoprefixer") //Автоматичне створення вендорних автопрефіксів
+	del = require("del"); //пакет удаления
+	
 
 //Препроцесінг sass
 gulp.task("sass", function() { //таск з назвою "sass"
@@ -12,6 +14,7 @@ gulp.task("sass", function() { //таск з назвою "sass"
 	.pipe(gulp.dest("app/css")) //виводим результат перетворення в папку www/css (тут файл не пишеться, тільки папка)
     .pipe(browserSync.reload({stream: true})) //інжектування стилів css наживо в нашу веб-сторінку
 });
+
 
 //Live Reload (перезагрузка страницы после изменения исходных файлов)
 //також сервер
@@ -26,6 +29,11 @@ gulp.task("browser-sync", function() {
 });
 
 
+gulp.task("clean", function() {
+   return del.sync("dist");  //удаляєм папку dist
+});
+
+
 //спостерігання за змінами в файлах +
 //запуск сервера + Live Reload +
 //автоматичний препроцесінг sass
@@ -33,4 +41,21 @@ gulp.task("watch", ["browser-sync", "sass"], function() { //в квадратн�
 	gulp.watch("app/sass/**/*.scss", ["sass"]); //слідкуєм за всіма файлами scss. В квадратних дужках - масив тасків які будем при цьому виконувати
     gulp.watch("app/*.html", browserSync.reload);//слідкуєм за всіма файлами html в корні app
     gulp.watch("app/js/*.js", browserSync.reload); //слідкуєм за всіма файлами js в папці js
+});
+
+
+
+
+//На продакшн
+gulp.task("build", ["clean", "sass"] , function() {
+   var buildCss = gulp.src(["app/css/**/*.css"])
+   .pipe(sass({outputStyle: "compressed"}).on('error', notify.onError()))
+   .pipe(gulp.dest("dist/css"));
+
+   var buildFonts = gulp.src("app/fonts/**/*")  //змінна для шрифтів
+   .pipe(gulp.dest("dist/fonts"));
+
+   var buildHtml = gulp.src("app/*.html")  //змінна для файлів Html
+   .pipe(gulp.dest("dist"));
+   
 });

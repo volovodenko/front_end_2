@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("../fonts/roboto-regular-webfont"), format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto-Italic';
+  font-style: normal;
+  font-weight: 400;
+  src: local("../fonts/roboto-italic-webfont"), format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
 html, body {
   font-family: "Roboto", sans-serif;
   font-size: 100%;
@@ -245,6 +261,7 @@ html, body {
   margin: 0;
   text-align: justify;
   font-style: italic;
+  font-family: "Roboto-Italic", sans-serif;
 }
 
 .education_table-row dd P:first-child {
@@ -363,6 +380,7 @@ html, body {
   margin: 0;
   text-align: justify;
   font-style: italic;
+  font-family: "Roboto-Italic", sans-serif;
 }
 
 .experience_table-row dd P:first-child {
