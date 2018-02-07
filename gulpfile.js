@@ -3,7 +3,9 @@ var gulp = require("gulp"), //підключаєм gulp
     browserSync = require("browser-sync"), //підключаєм пакет BrowserSync
 	notify = require("gulp-notify"),  //підключаєм пакет для виводу помилок у вспливаюче вікно
 	autoprefixer = require("gulp-autoprefixer") //Автоматичне створення вендорних автопрефіксів
-	del = require("del"); //пакет удаления
+	del = require("del"), //пакет удаления
+	imagemin = require("gulp-imagemin"), //пакет для обробки зображень
+    pngquant = require("imagemin-pngquant"); //пакет для обробки зображень
 	
 
 //Препроцесінг sass
@@ -34,6 +36,19 @@ gulp.task("clean", function() {
 });
 
 
+
+gulp.task("img", function() {
+   return gulp.src("app/img/**/*")
+   .pipe(imagemin({
+      interlaced: true,
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant]
+   }))
+   .pipe(gulp.dest("dist/img"));
+});
+
+
 //спостерігання за змінами в файлах +
 //запуск сервера + Live Reload +
 //автоматичний препроцесінг sass
@@ -47,7 +62,7 @@ gulp.task("watch", ["browser-sync", "sass"], function() { //в квадратн�
 
 
 //На продакшн
-gulp.task("build", ["clean", "sass"] , function() {
+gulp.task("build", ["clean", "img", "sass"] , function() {
    var buildCss = gulp.src(["app/css/**/*.css"])
    .pipe(sass({outputStyle: "compressed"}).on('error', notify.onError()))
    .pipe(gulp.dest("dist/css"));
