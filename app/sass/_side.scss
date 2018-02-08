@@ -51,19 +51,9 @@
           border-radius: 50%;
           text-align: center;
           @include rem(font-size, 26px);
-
-          @include tablet {
-            @include rem(line-height, 60px);
-            @include rem(width, 60px);
-            @include rem(height, 60px);
-          }
-
-          @include desktop {
-            @include rem(font-size, 26px);
-            @include rem(line-height, 40px);
-            @include rem(width, 40px);
-            @include rem(height, 40px);
-          }
+          @include rem(line-height, 40px);
+          @include rem(width, 40px);
+          @include rem(height, 40px);
 
           &:hover {
             background-color: darkred;
@@ -138,14 +128,7 @@
     progress {
       width: 100%;
       background-color: $bg-color-progress1;
-
-      @include tablet {
-        @include rem(height, 40px);
-      }
-
-      @include desktop {
-        @include rem(height, 20px);
-      }
+      @include rem(height, 20px);
 
       &::-webkit-progress-value {
         background-color: $bg-color-progress2;

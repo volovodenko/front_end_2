@@ -146,30 +146,12 @@ html, body {
   text-align: center;
   font-size: 26px;
   font-size: 1.625rem;
-}
-
-@media (max-device-width: 767px) {
-  .info_contact ul li i {
-    line-height: 60px;
-    line-height: 3.75rem;
-    width: 60px;
-    width: 3.75rem;
-    height: 60px;
-    height: 3.75rem;
-  }
-}
-
-@media (min-device-width: 768px) {
-  .info_contact ul li i {
-    font-size: 26px;
-    font-size: 1.625rem;
-    line-height: 40px;
-    line-height: 2.5rem;
-    width: 40px;
-    width: 2.5rem;
-    height: 40px;
-    height: 2.5rem;
-  }
+  line-height: 40px;
+  line-height: 2.5rem;
+  width: 40px;
+  width: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
 }
 
 .info_contact ul li i:hover {
@@ -242,20 +224,8 @@ html, body {
 .skills_content progress {
   width: 100%;
   background-color: #b8b8b8;
-}
-
-@media (max-device-width: 767px) {
-  .skills_content progress {
-    height: 40px;
-    height: 2.5rem;
-  }
-}
-
-@media (min-device-width: 768px) {
-  .skills_content progress {
-    height: 20px;
-    height: 1.25rem;
-  }
+  height: 20px;
+  height: 1.25rem;
 }
 
 .skills_content progress::-webkit-progress-value {
