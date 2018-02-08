@@ -5,7 +5,8 @@ var gulp = require("gulp"), //підключаєм gulp
 	autoprefixer = require("gulp-autoprefixer") //Автоматичне створення вендорних автопрефіксів
 	del = require("del"), //пакет удаления
 	imagemin = require("gulp-imagemin"), //пакет для обробки зображень
-    pngquant = require("imagemin-pngquant"); //пакет для обробки зображень
+    pngquant = require("imagemin-pngquant"), //пакет для обробки зображень
+	cssnano = require("gulp-cssnano"); //обработчик css
 	
 
 //Препроцесінг sass
@@ -64,7 +65,7 @@ gulp.task("watch", ["browser-sync", "sass"], function() { //в квадратн�
 //На продакшн
 gulp.task("build", ["clean", "img", "sass"] , function() {
    var buildCss = gulp.src(["app/css/**/*.css"])
-   .pipe(sass({outputStyle: "compressed"}).on('error', notify.onError()))
+   .pipe(cssnano({outputStyle: "compressed"}))
    .pipe(gulp.dest("dist/css"));
 
    var buildFonts = gulp.src("app/fonts/**/*")  //змінна для шрифтів
