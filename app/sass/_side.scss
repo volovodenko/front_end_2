@@ -1,7 +1,5 @@
-
-
 .info {
-  margin-bottom: 10px;
+  @include rem(margin-bottom, 10px);
 
   &_foto {
     text-align: center;
@@ -56,23 +54,16 @@
 
           @include tablet {
             @include rem(line-height, 60px);
-            //line-height: 40px;
             @include rem(width, 60px);
-            //width: 40px;
             @include rem(height, 60px);
-            //height: 40px;
           }
 
           @include desktop {
             @include rem(font-size, 26px);
             @include rem(line-height, 40px);
-            //line-height: 40px;
             @include rem(width, 40px);
-            //width: 40px;
             @include rem(height, 40px);
-            //height: 40px;
           }
-
 
           &:hover {
             background-color: darkred;
@@ -81,8 +72,8 @@
         }
 
         span, a {
-          line-height: 40px;
-          margin-left: 10px;
+          @include rem(line-height, 40px);
+          @include rem(margin-left, 10px);
           vertical-align: top;
           text-decoration: none;
         }
@@ -94,7 +85,7 @@
 
 
 .about {
-  margin-bottom: 10px;
+  @include rem(margin-bottom, 10px);
 
   &_title {
 
@@ -103,15 +94,14 @@
       text-shadow: 3px 2px 3px gray;
       color: $text-color4;
       @include rem(font-size, 28px);
-
     }
   }
 
   &_main {
-    padding: 10px 0;
+    @include rem(padding, 10px 0);
 
     p {
-      margin: 0;
+      @include rem(margin, 0);
       text-align: justify;
     }
   }
@@ -120,7 +110,7 @@
 
 
 .skills{
-  margin-bottom: 10px;
+  @include rem(margin-bottom, 10px);
 
   &_title {
 
@@ -133,21 +123,21 @@
   }
 
   &_content {
-    padding: 10px 0;
+    @include rem(padding, 10px 0);
 
     ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
+      @include rem(padding, 0);
+      @include rem(margin, 0);
 
       li {
-        padding-bottom: 5px;
+        @include rem(padding-bottom, 5px);
       }
     }
 
     progress {
       width: 100%;
-      background-color: #b8b8b8;
+      background-color: $bg-color-progress1;
 
       @include tablet {
         @include rem(height, 40px);
@@ -157,10 +147,8 @@
         @include rem(height, 20px);
       }
 
-
-
       &::-webkit-progress-value {
-        background-color: #335582;
+        background-color: $bg-color-progress2;
       }
     }
   }

@@ -1,19 +1,6 @@
-$bg-color-wrapper: white;
-$bg-color-side: #e6e6e6;
-$bg-color-icons: #355681;
-$bg-color-title-1: #b8b8b8;
-$bg-color-title-2: #3e5486;
-$text-color1: white;
-$text-color2: gray;
-$text-color3: #34547d;
-$text-color4: #3b2e26;
 
-$wrapper-width: 95%;
-$aside-width: 335px;
-
-
-
-@import "my_mixins";
+@import "variables";
+@import "mixins";
 @import "main";
 @import "side";
 @import "content";

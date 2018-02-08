@@ -26,7 +26,9 @@ html, body {
   margin: 0 auto;
   background-color: white;
   min-height: 1400px;
-  min-width: 350px;
+  min-height: 87.5rem;
+  min-height: 350px;
+  min-height: 21.875rem;
   position: relative;
 }
 
@@ -40,6 +42,7 @@ html, body {
 .side {
   float: left;
   padding: 20px;
+  padding: 1.25rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #e6e6e6;
@@ -64,6 +67,8 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px;
+  padding: 1.25rem;
+  padding: 20px;
 }
 
 @media (max-device-width: 767px) {
@@ -81,6 +86,7 @@ html, body {
 
 .info {
   margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .info_foto {
@@ -174,13 +180,16 @@ html, body {
 
 .info_contact ul li span, .info_contact ul li a {
   line-height: 40px;
+  line-height: 2.5rem;
   margin-left: 10px;
+  margin-left: 0.625rem;
   vertical-align: top;
   text-decoration: none;
 }
 
 .about {
   margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .about_title h2 {
@@ -193,6 +202,7 @@ html, body {
 
 .about_main {
   padding: 10px 0;
+  padding: 0.625rem 0;
 }
 
 .about_main p {
@@ -202,6 +212,7 @@ html, body {
 
 .skills {
   margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .skills_title h2 {
@@ -214,6 +225,7 @@ html, body {
 
 .skills_content {
   padding: 10px 0;
+  padding: 0.625rem 0;
 }
 
 .skills_content ul {
@@ -224,6 +236,7 @@ html, body {
 
 .skills_content ul li {
   padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
 }
 
 .skills_content progress {
@@ -253,7 +266,9 @@ html, body {
   display: inline;
   background-color: #b8b8b8;
   padding: 0 5px;
+  padding: 0 0.3125rem;
   border-radius: 5px;
+  border-radius: 0.3125rem;
   color: white;
   -webkit-box-shadow: 3px 3px 3px gray;
           box-shadow: 3px 3px 3px gray;
@@ -269,7 +284,9 @@ html, body {
   display: inline;
   background-color: #3e5486;
   padding: 0 5px;
+  padding: 0 0.3125rem;
   border-radius: 5px;
+  border-radius: 0.3125rem;
   color: white;
   -webkit-box-shadow: 3px 3px 3px gray;
           box-shadow: 3px 3px 3px gray;
@@ -279,7 +296,9 @@ html, body {
 
 .education_table {
   margin-top: 5px;
+  margin-top: 0.3125rem;
   margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   display: table;
   width: 100%;
 }
@@ -291,22 +310,24 @@ html, body {
 .education_table-row dt {
   display: table-cell;
   padding: 5px 5px 5px 0;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0;
   width: 15%;
 }
 
 .education_table-row dd {
   display: table-cell;
   padding: 5px 5px 5px 0;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0;
 }
 
-.education_table-row dd P {
+.education_table-row dd p {
   margin: 0;
   text-align: justify;
   font-style: italic;
   font-family: "Roboto-Italic", sans-serif;
 }
 
-.education_table-row dd P:first-child {
+.education_table-row dd p:first-child {
   color: gray;
   font-style: normal;
 }
@@ -320,7 +341,9 @@ html, body {
   display: inline;
   background-color: #b8b8b8;
   padding: 0 5px;
+  padding: 0 0.3125rem;
   border-radius: 5px;
+  border-radius: 0.3125rem;
   color: white;
   -webkit-box-shadow: 3px 3px 3px gray;
           box-shadow: 3px 3px 3px gray;
@@ -330,7 +353,9 @@ html, body {
 
 .publications_table {
   margin-top: 5px;
+  margin-top: 0.3125rem;
   margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   display: table;
   width: 100%;
 }
@@ -342,6 +367,7 @@ html, body {
 .publications_table-row dt {
   display: table-cell;
   padding: 5px 5px 5px 0;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0;
   width: 15%;
 }
 
@@ -354,7 +380,9 @@ html, body {
   display: inline;
   background-color: #3e5486;
   padding: 0 5px;
+  padding: 0 0.3125rem;
   border-radius: 5px;
+  border-radius: 0.3125rem;
   color: white;
   -webkit-box-shadow: 3px 3px 3px gray;
           box-shadow: 3px 3px 3px gray;
@@ -364,7 +392,9 @@ html, body {
 
 .awards_table {
   margin-top: 5px;
+  margin-top: 0.3125rem;
   margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   display: table;
   width: 100%;
 }
@@ -376,6 +406,7 @@ html, body {
 .awards_table-row dt {
   display: table-cell;
   padding: 5px 5px 5px 0;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0;
   width: 15%;
 }
 
@@ -388,7 +419,9 @@ html, body {
   display: inline;
   background-color: #b8b8b8;
   padding: 0 5px;
+  padding: 0 0.3125rem;
   border-radius: 5px;
+  border-radius: 0.3125rem;
   color: white;
   -webkit-box-shadow: 3px 3px 3px gray;
           box-shadow: 3px 3px 3px gray;
@@ -398,7 +431,9 @@ html, body {
 
 .experience_table {
   margin-top: 5px;
+  margin-top: 0.3125rem;
   margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   display: table;
   width: 100%;
 }
@@ -410,12 +445,14 @@ html, body {
 .experience_table-row dt {
   display: table-cell;
   padding: 5px 5px 5px 0;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0;
   width: 15%;
 }
 
 .experience_table-row dd {
   display: table-cell;
   padding: 5px 5px 5px 0;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0;
 }
 
 .experience_table-row dd P {
@@ -439,7 +476,9 @@ html, body {
   display: inline;
   background-color: #3e5486;
   padding: 0 5px;
+  padding: 0 0.3125rem;
   border-radius: 5px;
+  border-radius: 0.3125rem;
   color: white;
   -webkit-box-shadow: 3px 3px 3px gray;
           box-shadow: 3px 3px 3px gray;
@@ -449,6 +488,7 @@ html, body {
 
 .other h3 {
   margin: 10px 0;
+  margin: 0.625rem 0;
   color: gray;
   font-size: 24px;
   font-size: 1.5rem;

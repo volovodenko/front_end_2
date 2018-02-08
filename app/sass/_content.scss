@@ -3,8 +3,8 @@
   h2 {
     display: inline;
     background-color: $bg-color-title-1;
-    padding: 0 5px;
-    border-radius: 5px;
+    @include rem(padding, 0 5px);
+    @include rem(border-radius, 5px);
     color: $text-color1;
     box-shadow: 3px 3px 3px gray;
     @include rem(font-size, 28px);
@@ -20,16 +20,16 @@
   h2 {
     display: inline;
     background-color: $bg-color-title-2;
-    padding: 0 5px;
-    border-radius: 5px;
+    @include rem(padding, 0 5px);
+    @include rem(border-radius, 5px);
     color: $text-color1;
     box-shadow: 3px 3px 3px gray;
     @include rem(font-size, 28px);
   }
 
   &_table {
-    margin-top: 5px;
-    margin-bottom: 15px;
+    @include rem(margin-top, 5px);
+    @include rem(margin-bottom, 15px);
     display: table;
     width: 100%;
 
@@ -38,16 +38,16 @@
 
       dt {
         display: table-cell;
-        padding: 5px 5px 5px 0;
+        @include rem(padding, 5px 5px 5px 0);
         width: 15%;
       }
 
       dd {
         display: table-cell;
-        padding: 5px 5px 5px 0;
+        @include rem(padding, 5px 5px 5px 0);
 
-        P {
-          margin: 0;
+        p {
+          @include rem(margin, 0);
           text-align: justify;
           font-style: italic;
           font-family: "Roboto-Italic", sans-serif;
@@ -72,16 +72,16 @@
   h2 {
     display: inline;
     background-color: $bg-color-title-1;
-    padding: 0 5px;
-    border-radius: 5px;
+    @include rem(padding, 0 5px);
+    @include rem(border-radius, 5px);
     color: $text-color1;
     box-shadow: 3px 3px 3px gray;
     @include rem(font-size, 28px);
   }
 
   &_table {
-    margin-top: 5px;
-    margin-bottom: 15px;
+    @include rem(margin-top, 5px);
+    @include rem(margin-bottom, 15px);
     display: table;
     width: 100%;
 
@@ -90,7 +90,7 @@
 
       dt {
         display: table-cell;
-        padding: 5px 5px 5px 0;
+        @include rem(padding, 5px 5px 5px 0);
         width: 15%;
       }
 
@@ -107,16 +107,16 @@
   h2 {
     display: inline;
     background-color: $bg-color-title-2;
-    padding: 0 5px;
-    border-radius: 5px;
+    @include rem(padding, 0 5px);
+    @include rem(border-radius, 5px);
     color: $text-color1;
     box-shadow: 3px 3px 3px gray;
     @include rem(font-size, 28px);
   }
 
   &_table {
-    margin-top: 5px;
-    margin-bottom: 15px;
+    @include rem(margin-top, 5px);
+    @include rem(margin-bottom, 15px);
     display: table;
     width: 100%;
 
@@ -125,7 +125,7 @@
 
       dt {
         display: table-cell;
-        padding: 5px 5px 5px 0;
+        @include rem(padding, 5px 5px 5px 0);
         width: 15%;
       }
 
@@ -143,16 +143,16 @@
   h2 {
     display: inline;
     background-color: $bg-color-title-1;
-    padding: 0 5px;
-    border-radius: 5px;
+    @include rem(padding, 0 5px);
+    @include rem(border-radius, 5px);
     color: $text-color1;
     box-shadow: 3px 3px 3px gray;
     @include rem(font-size, 28px);
   }
 
   &_table {
-    margin-top: 5px;
-    margin-bottom: 15px;
+    @include rem(margin-top, 5px);
+    @include rem(margin-bottom, 15px);
     display: table;
     width: 100%;
 
@@ -161,16 +161,16 @@
 
       dt {
         display: table-cell;
-        padding: 5px 5px 5px 0;
+        @include rem(padding, 5px 5px 5px 0);
         width: 15%;
       }
 
       dd {
         display: table-cell;
-        padding: 5px 5px 5px 0;
+        @include rem(padding, 5px 5px 5px 0);
 
         P {
-          margin: 0;
+          @include rem(margin, 0);
           text-align: justify;
           font-style: italic;
           font-family: "Roboto-Italic", sans-serif;
@@ -195,21 +195,21 @@
   h2 {
     display: inline;
     background-color: $bg-color-title-2;
-    padding: 0 5px;
-    border-radius: 5px;
+    @include rem(padding, 0 5px);
+    @include rem(border-radius, 5px);
     color: $text-color1;
     box-shadow: 3px 3px 3px gray;
     @include rem(font-size, 28px);
   }
 
   h3 {
-    margin: 10px 0;
+    @include rem(margin, 10px 0);
     color: $text-color2;
     @include rem(font-size, 24px);
   }
 
   p {
     text-align: justify;
-    margin: 0;
+    @include rem(margin, 0);
   }
 }

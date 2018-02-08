@@ -23,10 +23,10 @@ html, body {
 .wrapper {
   box-sizing: border-box;
   width: $wrapper-width;
-  margin: 0 auto;
+  @include rem(margin, 0 auto);
   background-color: $bg-color-wrapper;
-  min-height: 1400px;
-  min-width: 350px;
+  @include rem(min-height, 1400px);
+  @include rem(min-height, 350px);
   position: relative;
 }
 /*
@@ -39,7 +39,7 @@ html, body {
 
 .side {
   float: left;
-  padding: 20px;
+  @include rem(padding, 20px);
   box-sizing: border-box;
   background-color: $bg-color-side;
 
@@ -50,8 +50,8 @@ html, body {
   @include desktop {
     width: $aside-width;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    @include rem(top, 0);
+    @include rem(bottom, 0);
   }
 
 
@@ -60,6 +60,7 @@ html, body {
 .content {
 
   box-sizing: border-box;
+  @include rem(padding, 20px);
   padding: 20px;
 
   @include tablet {
@@ -70,7 +71,5 @@ html, body {
   @include desktop {
     margin-left: $aside-width;
   }
-
-
 
 }
