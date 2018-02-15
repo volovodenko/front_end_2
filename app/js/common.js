@@ -1,16 +1,16 @@
 var question = prompt("Введите Ваш возраст?"),
-    choise_one = function () {
+    choiseOne = function () {
         alert("Ваш возраст " + question + "лет! Бобро пожаловать!")
     },
-    choise_two = function () {
+    choiseTwo = function () {
         alert("Досвидос амиго!");
         location.href = "about:blank";
     }
 
 if (question >= 18) {
-    choise_one();
+    choiseOne();
 } else {
-    choise_two();
+    choiseTwo();
 }
 
 
