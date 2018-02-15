@@ -6,7 +6,8 @@ var gulp = require("gulp"), //підключаєм gulp
 	del = require("del"), //пакет удаления
 	imagemin = require("gulp-imagemin"), //пакет для обробки зображень
     pngquant = require("imagemin-pngquant"), //пакет для обробки зображень
-	cssnano = require("gulp-cssnano"); //обработчик css
+	cssnano = require("gulp-cssnano"), //обработчик css
+	uglify = require("gulp-uglify"); //Minify JavaScript
 	
 
 //Препроцесінг sass
@@ -61,7 +62,6 @@ gulp.task("watch", ["browser-sync", "sass"], function() { //в квадратн�
 
 
 
-
 //На продакшн
 gulp.task("build", ["clean", "img", "sass"] , function() {
    var buildCss = gulp.src(["app/css/**/*.css"])
@@ -73,5 +73,9 @@ gulp.task("build", ["clean", "img", "sass"] , function() {
 
    var buildHtml = gulp.src("app/*.html")  //змінна для файлів Html
    .pipe(gulp.dest("dist"));
+   
+   var buildJs = gulp.src("app/js/**/*")  //змінна для скриптів
+	.pipe(uglify())  //зжимаєм
+	.pipe(gulp.dest("dist/js"));
    
 });
