@@ -1,6 +1,4 @@
-var username = prompt("Введите логин"),
-
-    pwd = function () {
+var pwd = function () {
         var password = prompt("Введите пароль");
 
         switch (password) {
@@ -18,6 +16,8 @@ var username = prompt("Введите логин"),
     },
 
     login = function () {
+        var username = prompt("Введите логин");
+
         switch (username) {
             case "guest":
                 alert("Добро пожаловать");
