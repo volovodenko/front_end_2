@@ -1,16 +1,36 @@
-var question = prompt("Введите Ваш возраст?"),
-    choiseOne = function () {
-        alert("Ваш возраст " + question + "лет! Бобро пожаловать!")
+var username = prompt("Введите логин"),
+
+    pwd = function () {
+        var password = prompt("Введите пароль");
+
+        switch (password) {
+            case "123":
+            case "333":
+            case "777":
+                alert("Добро пожаловать " + username);
+                break;
+
+            default :
+                alert("Пароль неверный");
+                location.href = "about:blank";
+                break;
+        }
     },
-    choiseTwo = function () {
-        alert("Досвидос амиго!");
-        location.href = "about:blank";
-    }
 
-if (question >= 18) {
-    choiseOne();
-} else {
-    choiseTwo();
-}
+    login = function () {
+        switch (username) {
+            case "guest":
+                alert("Добро пожаловать");
+                break;
+            case "user":
+            case "admin":
+                pwd();
+                break;
+            default :
+                alert("Пользователя с именем " + username + " нет в системе");
+                location.href = "about:blank";
+                break;
+        }
+    };
 
-
+login();
